@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="smartgwt">
+    <CLASSES>
+      <root url="jar:///Library/Java/Extensions/smartgwt-3.1/smartgwt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///Library/Java/Extensions/smartgwt-3.1/smartgwt.jar!/" />
+    </SOURCES>
+  </library>
+</component>

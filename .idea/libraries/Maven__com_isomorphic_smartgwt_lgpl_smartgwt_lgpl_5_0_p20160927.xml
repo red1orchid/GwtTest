@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.isomorphic.smartgwt.lgpl:smartgwt-lgpl:5.0-p20160927">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/isomorphic/smartgwt/lgpl/smartgwt-lgpl/5.0-p20160927/smartgwt-lgpl-5.0-p20160927.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/isomorphic/smartgwt/lgpl/smartgwt-lgpl/5.0-p20160927/smartgwt-lgpl-5.0-p20160927-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/isomorphic/smartgwt/lgpl/smartgwt-lgpl/5.0-p20160927/smartgwt-lgpl-5.0-p20160927-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,8 +1,10 @@
-package com.gwt.sample.server;
+package com.gwt.sample.server.web;
 
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonTypeInfo;
 import org.codehaus.jackson.annotate.JsonTypeName;
+
+import java.util.List;
 
 /**
  * Created by PerevalovaMA on 21.11.2016.
@@ -15,13 +17,13 @@ public class RDSFetchResponse<T> {
     private int startRow;
     private int endRow;
     private int totalRows;
-    private T[] data;
+    private List<T> data;
 
-    public RDSFetchResponse(int status, int startRow, int endRow, int totalRows, T[] data) {
+    public RDSFetchResponse(int status, List<T> data) {
         this.status = status;
-        this.startRow = startRow;
-        this.endRow = endRow;
-        this.totalRows = totalRows;
+        totalRows = data.size();
+        startRow = 0;
+        endRow = totalRows - 1;
         this.data = data;
     }
 }

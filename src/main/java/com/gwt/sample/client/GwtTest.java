@@ -38,7 +38,7 @@ public class GwtTest extends VLayout implements EntryPoint {
         final DynamicForm selectorForm = new DynamicForm();
         final RestDataSource categoriesRDS = createCategoriesRDS();
 
-        final SelectItem categoriesSelector = createCategoriesSelector(categoriesRDS, "Message category", true);
+      final SelectItem categoriesSelector = createCategoriesSelector(categoriesRDS, "Message category", true);
         categoriesSelector.addChangedHandler(new ChangedHandler() {
             @Override
             public void onChanged(ChangedEvent event) {
@@ -123,6 +123,8 @@ public class GwtTest extends VLayout implements EntryPoint {
 
     private ListGrid createTable() {
         final RestDataSource messagesRDS = createMessagesRDS();
+        messagesRDS.getField("categoryId").setHidden(true);
+        messagesRDS.getField("categoryName").setTitle("Category");
 
         ListGrid table = new ListGrid(messagesRDS);
         table.setAutoFetchData(true);
@@ -134,8 +136,6 @@ public class GwtTest extends VLayout implements EntryPoint {
         table.setAllowFilterExpressions(false);
         table.setShowHeaderContextMenu(false);
         table.setShowHeaderMenuButton(false);
-
-        table.hideField("categoryId");
 
         return table;
     }
@@ -159,7 +159,7 @@ public class GwtTest extends VLayout implements EntryPoint {
         messagesRDS.setDataFormat(DSDataFormat.JSON);
         messagesRDS.setFields(
                 new DataSourceIntegerField("categoryId"),
-                new DataSourceTextField("category"),
+                new DataSourceTextField("categoryName"),
                 new DataSourceTextField("subject"),
                 new DataSourceTextField("body"));
 
